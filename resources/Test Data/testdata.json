@@ -1,0 +1,12 @@
+{
+  "username": "postman",
+  "password": "password",
+
+  "getPostmanEcho": [
+    "email: sidharth.shukla19@gmail.com",
+    "phone: 54546464666",
+    "city: Vancouver",
+    "Area: Surrey",
+    "State: BC"
+  ]
+}

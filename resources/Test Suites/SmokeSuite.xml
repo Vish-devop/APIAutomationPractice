@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--<suite name="Automation Smoke Suite">-->
+<!--    <test name="API TestCases">-->
+<!--        <classes>-->
+<!--            &lt;!&ndash; taking a scenario that you want to execute all the classes of getUsers.&ndash;&gt;-->
+<!--            <class name="userManagement.getUsers"/> -->
+<!--            &lt;!&ndash;Let's say you also need to run all the test-cases of postmanEcho, then just add the class for that also&ndash;&gt;-->
+<!--            <class name="userManagement.getPostmanEcho"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--        </suite>-->
+
+
+<!--  Scenario(2): If someone asks you to run all the class from userManagement, so instead of using single classes, you can use Packages-->
+
+<!--<suite name="API Automation Session Smoke Suite">-->
+<!--    <test name="API Users Test Cases">-->
+<!--        <packages>-->
+<!--            <package name="userManagement"></package>-->
+<!--        </packages>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<!--Senario (3): You want to execute (2) test case from user, 1 from postman Echo, so there you would be using Groups.-->
+<suite name="API Automation Session Smoke Suite">
+    <test name="API users Test case">
+        <groups>
+            <run>
+                <include name="SmokeSuits"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="userManagement.getUsers"></class>
+            <class name="userManagement.getPostmanEcho"></class>
+        </classes>
+    </test>
+</suite>

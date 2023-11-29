@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Smoke Suite">
+    <listeners>
+        <listener class-name="utils.RetryListener"/>
+    </listeners>
+    <test name="API TestCases">
+        <classes>
+            <!-- taking a scenario that you want to execute all the classes of getUsers.-->
+            <class name="userManagement.getUsers"/>
+            <!--Let's say you also need to run all the test-cases of postmanEcho, then just add the class for that also-->
+
+            <!--            <class name="userManagement.getPostmanEcho"/>-->
+        </classes>
+    </test>
+</suite>
